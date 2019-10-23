@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body style="background-color:powderblue;">
+  <head>
+  <title>Subscriber List</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  	<link href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  	<link href="../../css/standard.css" rel="stylesheet">
+  </head>
+  <body>
+ <nav class="navbar navbar-light bg-light">
+  <form class="form-inline">
+   <button type="button" class="btn btn-info">Home</button>
+   <button type="button" class="btn btn-info">Blog</button>
+   <button type="button" class="btn btn-info">Contact Me</button>
+  </form>
+</nav>
+    <h1>Welcome to My Awesome Site!</h1>
+    <h3>Subscribe to My List. Sign-up below!</h3>
+    
+<p>Please use the form below to sign up as a subscriber:</p>
+ <form action="#" th:action="@{/}" th:object="${subscriber}" method="post">
+    <table>
+	<tr>
+    <td>First Name:</td>
+	    <td><input type="text" th:field="*{firstName}" /></td>
+	</tr>
+	<tr>
+	    <td>Last Name:</td>
+	    <td><input type="text" th:field="*{lastName}" /></td>
+	</tr>
+	<tr>
+    	    <td>Username:</td>
+	    <td><input type="text" th:field="*{userName}" /></td>
+	</tr>
+	<tr>
+    <td><button type="submit">Submit Your Name</button></td>
+	</tr>
+    </table>
+</form>
+<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
+<script src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  </body>
+</html>
